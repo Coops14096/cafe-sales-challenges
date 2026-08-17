@@ -1,38 +1,3 @@
-"""
-CHALLENGE: Build an Order Class
-DIFFICULTY: Intermediate
-FOLDER: 01-cafe-pos / tier3_intermediate
-
-STORY
------
-The café wants each customer's order to be its own self-contained "thing"
-in the code, with its own list of items and its own total — that's exactly
-what a class is for.
-
-YOUR TASK
----------
-Complete the `Order` class below by implementing each method described in
-its docstring. Then test it using the code at the bottom of the file.
-
-EXAMPLE OUTPUT (from the test code at the bottom)
---------------------------------------------------
-Added Coffee to the order.
-Added Muffin to the order.
-Added Tea to the order.
-Removed Tea from the order.
-Current order: ['Coffee', 'Muffin']
-Order total: $9.5
-"""
-
-MENU = {
-    "Coffee": 4.50,
-    "Tea": 3.50,
-    "Muffin": 5.00,
-    "Toastie": 6.50,
-    "Hot Chocolate": 4.00,
-}
-
-
 class Order:
     """Represents one customer's order at The Trendiest Café."""
 

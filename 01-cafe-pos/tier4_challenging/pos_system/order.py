@@ -19,40 +19,27 @@ class Order:
     """Represents one customer's order, including quantities."""
 
     def __init__(self, menu: Menu):
-        """
-        Store the given menu so this order can check prices, and set up
-        an empty dictionary (self.items) to hold {item_name: quantity}.
-        """
-        # TODO: implement this method
-        pass
+        self.items = []
+        
 
     def add_item(self, item_name, quantity=1):
-        """
-        Add `quantity` of item_name to the order.
-        - If the item isn't on the menu, print a message and don't add it.
-        - If the item is already in the order, increase its quantity.
-        - Otherwise, add it as a new entry.
-        """
-        # TODO: implement this method
-        pass
+        if item_name in self.item:
+            self.item[item_name] += quantity
+        else:
+            if menu.has_item(item_name):
+                self.item.append[item_name:1]
+            else:
+                print(f"Sorry we do not currently stock {item_name}")
 
     def remove_item(self, item_name, quantity=1):
-        """
-        Remove `quantity` of item_name from the order.
-        - If removing would take the quantity to 0 or below, remove the
-          item entirely.
-        - If the item isn't in the order, print a message saying so.
-        """
-        # TODO: implement this method
-        pass
+        if item_name in self.item and self.item[item_name] <= quantity:
+            self.item[item_name] -= quantity
+            print(f"Removed {item_name} from your order")
+        else:
+            print(f"It doesn't look like you have {item_name} in your order")            
 
     def get_subtotal(self):
-        """
-        Return the total price of everything in the order BEFORE tax,
-        taking quantities into account (price * quantity for each item).
-        """
-        # TODO: implement this method
-        pass
+        for item in self.item:
 
 
 if __name__ == "__main__":
